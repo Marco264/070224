@@ -1,3 +1,3 @@
-# Visor Planeamiento_07/02/24
+# Visor para probar github
 
-Esto es una prueba
+Esto es una prueba_nada oficial ni pingo
