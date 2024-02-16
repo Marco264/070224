@@ -1,0 +1,16 @@
+var json_CAMPAACONTINENTE_2 = {
+"type": "FeatureCollection",
+"name": "CAMPAACONTINENTE_2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "AEC2", "description": "Arroyo El Claro y Freire // Polideportivo Zabala", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": -1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ -58.69909, -34.43228 ] } },
+{ "type": "Feature", "properties": { "Name": "AEC1", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": -1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ -58.70273, -34.44293 ] } },
+{ "type": "Feature", "properties": { "Name": "AEC4", "description": "Arroyo El Claro y Bancalari", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": -1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ -58.680071, -34.410876 ] } },
+{ "type": "Feature", "properties": { "Name": "AEC7", "description": "Canal Central y J. M. Loreto // Previo a la desembocadura de AEC en el Río Luján", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": -1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ -58.66252, -34.38088 ] } },
+{ "type": "Feature", "properties": { "Name": "ALT1", "description": "Arroyo Las Tunas y Panamericana // Entrada de ALT al partido de Tigre", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": -1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ -58.68882, -34.46074 ] } },
+{ "type": "Feature", "properties": { "Name": "ALT4", "description": "Desembocadura de Arroyo Las Tunas en Canal Aliviador (sobre ALT)", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": -1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ -58.62594, -34.4166 ] } },
+{ "type": "Feature", "properties": { "Name": "ALT3", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": -1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ -58.65626, -34.43178 ] } },
+{ "type": "Feature", "properties": { "Name": "CLR2", "description": "Canal La Rioja", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": -1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ -58.68324, -34.37223 ] } },
+{ "type": "Feature", "properties": { "Name": "AD", "description": "Arroyo Darragueira y Puente Calle Saavedra", "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1.0, "extrude": 0.0, "visibility": -1.0, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ -58.669466, -34.462804 ] } }
+]
+}
