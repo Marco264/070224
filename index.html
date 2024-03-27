@@ -83,6 +83,7 @@
             function verificarContraseña() {
                 var passwordInput = document.getElementById("password");
                 var password = passwordInput.value;
+
                 if (password !== "Carpinchos2024") {
                     alert("Contraseña incorrecta. Inténtelo de nuevo.");
                     // Aquí puedes redirigir a una página diferente o realizar otras acciones si la contraseña es incorrecta.
@@ -95,13 +96,22 @@
                     document.body.classList.remove("modal-open"); // Restaurar el desplazamiento del cuerpo
                 }
             }
+
             // Llama a la función verificarContraseña cuando se hace clic en el botón
             document.getElementById("submitBtn").addEventListener("click", function() {
                 verificarContraseña();
             });
+
+            // Llama a la función verificarContraseña cuando se presiona la tecla Enter en el campo de entrada de la contraseña
+            document.getElementById("password").addEventListener("keypress", function(e) {
+                if (e.key === 'Enter') {
+                    verificarContraseña();
+                }
+            });
+
             // Mostrar el diálogo modal después de que la página se haya cargado
             document.getElementById("passwordDialog").showModal();
-        });
+        }); 
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[-34.48362141296677,-58.68476804395502],[-34.321593811240874,-58.502129157203925]]);
