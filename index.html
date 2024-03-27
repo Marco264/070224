@@ -153,19 +153,14 @@
         });
         map.pm.enableGlobalRotateMode();
         map.pm.enableGlobalDragMode();
-        map.pm.enableGlobalRemovalMode();
+
         map.pm.setLang("es");
         map.pm.setPathOptions({
         color: "orange",
         fillColor: "green",
         fillOpacity: 0.2,
         });
-        map.on('pm:create', function(e) {
-        map.pm.enableGlobalRemovalMode();
-        });
-        map.on('pm:drawend', function(e) {
-        map.pm.disableGlobalRemovalMode();
-        });
+
         measureControl.addTo(map);
         document.getElementsByClassName('leaflet-control-measure-toggle')[0]
         .innerHTML = '';
