@@ -21,7 +21,6 @@
                 padding: 0;
                 margin: 0;
             }
-    
         dialog {
             border: 1px solid #000000;
             padding: 10px;
@@ -31,11 +30,9 @@
             color: white; /* Añadido para mejorar la visibilidad del texto */
             border-radius: 10px; /* Añadido para mejorar la visibilidad del texto */
         }
-
         body.modal-open {
             overflow: hidden;
         }
-        
         </style>
         <title>USO INTERNO_Visor planeamiento_beta</title>
     </head>
@@ -86,7 +83,6 @@
             function verificarContraseña() {
                 var passwordInput = document.getElementById("password");
                 var password = passwordInput.value;
-
                 if (password !== "Carpinchos2024") {
                     alert("Contraseña incorrecta. Inténtelo de nuevo.");
                     // Aquí puedes redirigir a una página diferente o realizar otras acciones si la contraseña es incorrecta.
@@ -99,19 +95,16 @@
                     document.body.classList.remove("modal-open"); // Restaurar el desplazamiento del cuerpo
                 }
             }
-
             // Llama a la función verificarContraseña cuando se hace clic en el botón
             document.getElementById("submitBtn").addEventListener("click", function() {
                 verificarContraseña();
             });
-
             // Mostrar el diálogo modal después de que la página se haya cargado
             document.getElementById("passwordDialog").showModal();
         });
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[-34.48362141296677,-58.68476804395502],[-34.321593811240874,-58.502129157203925]]);
-
         // Crear un objeto para almacenar las capas de mapas base
         var mapBaseLayers = {
             "Google Hybrid": L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
@@ -124,13 +117,10 @@
                 attribution: '&copy; <a href="https://www.google.com/maps/">2024 Google Inc.</a> Todos los derechos reservados'
             })
         };
-
         // Agregar control de capas para permitir que los usuarios seleccionen la capa de mapa base
         L.control.layers(mapBaseLayers).addTo(map);
-
         // Agregar control de hash para permitir enlaces directos a ubicaciones y configuración de capas
         var hash = new L.Hash(map);
-
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         function removeEmptyRowsFromPopupContent(content, feature) {
@@ -154,8 +144,6 @@
             primaryAreaUnit: 'sqmeters',
             secondaryAreaUnit: 'hectares'
         });
-
-
         map.pm.addControls({
         position: 'topleft',
         oneBlock: true,
@@ -172,8 +160,12 @@
         fillColor: "green",
         fillOpacity: 0.2,
         });
-
-
+        map.on('pm:create', function(e) {
+        map.pm.enableGlobalRemovalMode();
+        });
+        map.on('pm:drawend', function(e) {
+        map.pm.disableGlobalRemovalMode();
+        });
         measureControl.addTo(map);
         document.getElementsByClassName('leaflet-control-measure-toggle')[0]
         .innerHTML = '';
